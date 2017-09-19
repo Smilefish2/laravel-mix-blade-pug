@@ -1,0 +1,24 @@
+{
+  "name": "laravel-mix-blade-pug",
+  "version": "1.0.0",
+  "description": "Make Laravel blade view template using laravel mix and pugjs.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smilefish2/laravel-mix-blade-pug.git"
+  },
+  "keywords": [],
+  "author": "JMJ<yang.jmj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Smilefish2/laravel-mix-blade-pug/issues"
+  },
+  "homepage": "https://github.com/Smilefish2/laravel-mix-blade-pug#readme",
+  "dependencies": {
+    "laravel-mix": "^1.4.3",
+    "mkdirp": "^0.5.1"
+  }
+}
