@@ -79,6 +79,7 @@ html
 
 - [bladejs-core](https://github.com/iguntur/bladejs-core) - API for this src/core module
 - [laravel-mix-pug](https://github.com/matejsvajger/laravel-mix-pug) - API for this src/tasks module
+- [laravel-blade-jade](https://github.com/iguntur/laravel-blade-jade) - API for this README.md
 
 ## License
 
