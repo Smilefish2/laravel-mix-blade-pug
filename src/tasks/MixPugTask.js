@@ -38,8 +38,15 @@ class MixPugTask extends Task {
      *
      */
     compile() {
+        try {
 
-        this.templates.forEach((template, index) => this.compileTemplate(template, index));
+            this.templates.forEach((template, index) => this.compileTemplate(template, index));
+
+            this.onSuccess();
+
+        } catch (e) {
+            this.onFail(e.name + ': ' + e.message);
+        }
 
         return this;
     }
@@ -65,10 +72,8 @@ class MixPugTask extends Task {
 
             fs.writeFileSync(output.path(), html);
 
-            this.onSuccess();
-
         } catch (e) {
-            this.onFail(e.name + ': ' + e.message);
+            throw e;
         }
     }
 
@@ -92,7 +97,7 @@ class MixPugTask extends Task {
             notifier.notify({
                 title: 'Laravel Mix',
                 message: 'Pug Compilation Successful',
-                contentImage: 'node_modules/laravel-mix-blade-pug/src/logo.png'
+                contentImage: Mix.paths.root('node_modules/laravel-mix-blade-pug/src/logo.png')
             });
         }
     }
@@ -114,7 +119,7 @@ class MixPugTask extends Task {
                 title: 'Laravel Mix',
                 subtitle: 'Pug Compilation Failed',
                 message: output,
-                contentImage: 'node_modules/laravel-mix-blade-pug/src/logo.png'
+                contentImage: Mix.paths.root('node_modules/laravel-mix-blade-pug/src/logo.png')
             });
         }
     }
