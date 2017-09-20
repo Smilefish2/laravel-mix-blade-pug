@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-blade-pug",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Make Laravel blade view template using laravel mix and pugjs.",
   "main": "src/index.js",
   "scripts": {

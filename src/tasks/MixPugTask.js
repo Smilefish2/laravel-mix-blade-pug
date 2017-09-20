@@ -40,7 +40,7 @@ class MixPugTask extends Task {
     compile() {
 
         this.templates.forEach((template, index) => this.compileTemplate(template, index));
-
+        this.onSuccess();
         return this;
     }
 
@@ -64,8 +64,6 @@ class MixPugTask extends Task {
             }
 
             fs.writeFileSync(output.path(), html);
-
-            this.onSuccess();
 
         } catch (e) {
             this.onFail(e.name + ': ' + e.message);
