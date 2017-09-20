@@ -97,7 +97,7 @@ class MixPugTask extends Task {
             notifier.notify({
                 title: 'Laravel Mix',
                 message: 'Pug Compilation Successful',
-                contentImage: Mix.paths.root('node_modules/laravel-mix-blade-pug/src/logo.png')
+                icon: Mix.paths.root('node_modules/laravel-mix-blade-pug/src/logo.png')
             });
         }
     }
@@ -119,7 +119,7 @@ class MixPugTask extends Task {
                 title: 'Laravel Mix',
                 subtitle: 'Pug Compilation Failed',
                 message: output,
-                contentImage: Mix.paths.root('node_modules/laravel-mix-blade-pug/src/logo.png')
+                icon: Mix.paths.root('node_modules/laravel-mix-blade-pug/src/logo.png')
             });
         }
     }
